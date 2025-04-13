@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Inventory Management</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <div class="container">
+    <header>
+      <h1>Welcome to Inventory Management</h1>
+    </header>
+
+    <!-- Product List Section -->
+    <section id="products">
+      <h2>Product List</h2>
+      <table id="productTable">
+        <thead>
+          <tr>
+            <th>Name</th>
+            <th>SKU</th>
+            <th>Category</th>
+            <th>Price</th>
+            <th>Quantity</th>
+          </tr>
+        </thead>
+        <tbody>
+          <!-- Product rows will be added dynamically here -->
+        </tbody>
+      </table>
+    </section>
+
+    <!-- Add Product Form -->
+    <section id="addProduct">
+      <h2>Add New Product</h2>
+      <form id="productForm">
+        <label for="productName">Product Name:</label>
+        <input type="text" id="productName" required>
+        
+        <label for="productSku">SKU:</label>
+        <input type="text" id="productSku" required>
+        
+        <label for="productCategory">Category:</label>
+        <input type="text" id="productCategory" required>
+        
+        <label for="productPrice">Price:</label>
+        <input type="number" id="productPrice" step="0.01" required>
+        
+        <label for="productQuantity">Quantity:</label>
+        <input type="number" id="productQuantity" required>
+        
+        <button type="submit">Add Product</button>
+      </form>
+    </section>
+
+    <!-- Sales Order Form -->
+    <section id="salesOrder">
+      <h2>Sales Order</h2>
+      <form id="salesForm">
+        <label for="salesProductSelect">Select Product:</label>
+        <select id="salesProductSelect" required></select>
+
+        <label for="quantitySold">Quantity Sold:</label>
+        <input type="number" id="quantitySold" required>
+
+        <button type="submit">Add Sales Order</button>
+      </form>
+    </section>
+
+    <!-- Purchase Order Form -->
+    <section id="purchaseOrder">
+      <h2>Purchase Order</h2>
+      <form id="purchaseForm">
+        <label for="purchaseProductSelect">Select Product:</label>
+        <select id="purchaseProductSelect" required></select>
+
+        <label for="quantityPurchased">Quantity Purchased:</label>
+        <input type="number" id="quantityPurchased" required>
+
+        <button type="submit">Add Purchase Order</button>
+      </form>
+    </section>
+
+    <script src="app.js"></script>
+  </div>
+</body>
+</html>
